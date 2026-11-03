@@ -2,7 +2,7 @@
 
 Writeups for CTF challenges I have solved, written in English.
 
-I started playing CTFs through my university's security lab and have been documenting each challenge as I work through it — the approach, the dead ends, and the final solution. The notes were originally kept in Chinese; this repository is the English version, maintained for reference and for sharing with the wider security community.
+I document each challenge as I work through it — the approach, the dead ends, and the final solution. The notes were originally kept in Chinese; this repository is the English version, maintained for reference and for sharing with the wider security community.
 
 ## Events
 
