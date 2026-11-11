@@ -10,19 +10,36 @@
 
 The attachment is a small playable 2048 game. Playing normally for a couple of rounds is enough to make the challenge's hint appear.
 
+![The 2048 game](../assets/2048-master/image1.png)
+
 ## Solution
 
-After a few moves the game printed a hint asking for a **16384** tile. Around the same time a new file, `layout.dat`, appeared next to the game.
+After a few moves the game printed a hint asking for a **16384** tile.
+
+![Hint asking for a 16384 tile](../assets/2048-master/image2.png)
+
+Around the same time a new file, `layout.dat`, appeared next to the game.
 
 Opening it in a hex editor shows the board state stored as powers of two:
+
+![layout.dat in a hex editor](../assets/2048-master/image3.png)
+![Reading the stored tile values](../assets/2048-master/image4.png)
 
 ```
 2 4 8 16 32 ...
 ```
 
-The obvious move is to edit the file directly and put 16384 on the board instead of grinding for it. My first two edits had no effect — I had not written the value to the slot the game actually reads on load.
+The obvious move is to edit the file directly and put 16384 on the board instead of grinding for it.
+
+![Editing the tile value](../assets/2048-master/image5.png)
+
+My first two edits had no effect — I had not written the value to the slot the game actually reads on load.
+
+![First attempt that did not take effect](../assets/2048-master/image6.png)
 
 After correcting the offset and saving, the game still did not react immediately; it only re-read the layout after one more move in-game. That extra move triggered the win check and the flag was displayed.
+
+![Flag after the extra move](../assets/2048-master/image7.png)
 
 ```
 moectf{Y0u_4re_a_2048_m4st3r!!!!r0erowhu}

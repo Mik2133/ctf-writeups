@@ -2,7 +2,7 @@
 
 Writeups for **MoeCTF 2025**, a Chinese university-level CTF hosted on `ctf.xidian.edu.cn`.
 
-These notes were originally written in Chinese while solving the challenges and have been translated and reorganised into English. Unlike the 2024 batch, no screenshots were kept for these solves, so the pages are text-only.
+These notes were originally written in Chinese while solving the challenges and have been translated and reorganised into English. Screenshots are taken from the original solve document.
 
 ## Index
 

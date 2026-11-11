@@ -10,13 +10,23 @@
 
 The attachment is a GIF. Its metadata is unremarkable, but some keyframes visibly contain fragments of a QR code. That makes it an image-steganography problem rather than a plain animation.
 
+![The GIF preview](../assets/rush/image1.png)
+
 ## Solution
 
 I stepped through the file in StegSolve, first checking individual colour channels and then individual frames.
 
+![Inspecting frames in StegSolve](../assets/rush/image2.png)
+
 The animation has **12 frames**. The QR codes are not simply placed in separate frames: because the frames flash quickly, what the eye sees is several codes superimposed by persistence of vision. Each frame therefore looks damaged, and no single frame decodes on its own with an online QR reader.
 
+![The QR fragments across the 12 frames](../assets/rush/image3.png)
+![Another frame showing the damage](../assets/rush/image4.png)
+
 My first attempt — stacking the frames in PowerPoint — did not produce a readable code either.
+
+![Online decoders failing on a single frame](../assets/rush/image5.png)
+![Stacking frames in PowerPoint](../assets/rush/image6.png)
 
 The actual approach is to repair the codes using the redundancy QR codes are designed with: the payload survives partial corruption because of Reed–Solomon error correction. Once the frames were repaired rather than naively overlaid, the code decoded.
 
