@@ -9,6 +9,7 @@ I document each challenge as I work through it — the approach, the dead ends, 
 | Event | Categories | Writeups |
 |---|---|---|
 | [MoeCTF 2024](moectf-2024/README.md) | Misc, Web, Pwn, Reverse | 27 |
+| [MoeCTF 2025](moectf-2025/README.md) | Misc | 11 |
 
 ## Structure
 
@@ -29,7 +30,7 @@ Each writeup follows the same layout: a metadata table with the category and the
 - Flags are quoted verbatim, including any `moectf{...}`-style wrapper.
 - Commands and payloads are shown as they were run, not normalised after the fact.
 - Challenges that were not finished are marked as incomplete rather than presented as solved.
-- Writeups that were translated from Chinese keep their original screenshots.
+- Writeups that were translated from Chinese keep their original screenshots when the solve notes included them.
 
 ## License
 
